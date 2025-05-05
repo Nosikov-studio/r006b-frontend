@@ -23,6 +23,9 @@ const form1 = document.getElementById('form1');
 
   fetch('http://truruki.ru/api/add', {
     method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
     body: JSON.stringify({
       ...FormDataObject,
       views: 0,
