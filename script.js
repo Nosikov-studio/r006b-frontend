@@ -40,9 +40,10 @@ const form1 = document.getElementById('form1');
   })
     .then(response => response.json())
     .then(j => {
-      console.log(j)
+      console.log(j);
       ab();
+      form1.reset(); // очищаем форму
     });
   });
 
-    form1.reset(); // очищаем форму
+    
