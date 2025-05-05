@@ -1,4 +1,5 @@
 
+
 const f5 = document.querySelector('.f5');
 const r5 = document.querySelector('.result5');
 
@@ -29,7 +30,8 @@ const form1 = document.getElementById('form1');
   fetch('http://truruki.ru/api/add', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      't':'b'
     },
     body: JSON.stringify({
       ...FormDataObject,
