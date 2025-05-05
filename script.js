@@ -22,7 +22,7 @@ const form1 = document.getElementById('form1');
   const FormDataObject = Object.fromEntries(formData);
 
   fetch('http://truruki.ru/api', {
-    method: 'post',
+    method: 'POST',
     body: JSON.stringify({
       ...FormDataObject,
       views: 0,
