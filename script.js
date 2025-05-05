@@ -1,6 +1,8 @@
 
-const f5 = document.querySelector('.f5')
-const r5 = document.querySelector('.result5')
+const f5 = document.querySelector('.f5');
+const r5 = document.querySelector('.result5');
+
+function ab() {
 
   fetch('http://truruki.ru/api')
     .then(response => response.json())
@@ -10,7 +12,10 @@ const r5 = document.querySelector('.result5')
       const html = a1.map(item => `<tr><td>${item.name}</td><td>${item.age}</td><tr>`).join('');
       r5.innerHTML =`<table> ${html} </table>`;
       
-})
+})};
+
+ab();
+
 
 
 
@@ -32,9 +37,10 @@ const form1 = document.getElementById('form1');
     })
   })
     .then(response => response.json())
-    .then(j => console.log(j));
+    .then(j => {
+      console.log(j)
+      ab();
+    });
   });
 
-
-
-    // form.reset(); // очищаем форму
+    form1.reset(); // очищаем форму
