@@ -21,7 +21,7 @@ const form1 = document.getElementById('form1');
   const formData = new FormData(form1); // Сбор данных формы
   const FormDataObject = Object.fromEntries(formData);
 
-  fetch('http://truruki.ru/api', {
+  fetch('http://truruki.ru/api/add', {
     method: 'POST',
     body: JSON.stringify({
       ...FormDataObject,
@@ -30,8 +30,8 @@ const form1 = document.getElementById('form1');
   })
     .then(response => response.json())
     .then(j => console.log(j));
+  });
+
 
 
     // form.reset(); // очищаем форму
-  });
-
